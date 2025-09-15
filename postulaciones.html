@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Adopta Ya - Postulaciones</title>
+</head>
+
+<body class="bg-light"> <!-- se agrega la clase bg-light para un fondo claro -->
+
+    <header class="text-center p-3 bg-dark text-white">
+        <h1>🐾 Bienvenido a Adopta Ya 🐾</h1>
+        <p>Tu mejor amigo te está esperando</p>
+    </header>
+
+    <!-- Navbar responsivo -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <!-- Botón hamburguesa para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú colapsable -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postulaciones.html">Postulaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postulacion.html">Nueva Postulación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">Postulaciones Recibidas</h2>
+
+        <!-- se crea la tabla -->
+        <table class="table table-bordered table-hover shadow">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Adoptante</th>
+                    <th>Email</th>
+                    <th>Mascota</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-postulaciones"></tbody>
+        </table>
+
+        <!-- boton para exportaer -->
+        <div class="text-center mb-4">
+            <button onclick="exportarTXT()" class="btn btn-warning">Exportar a TXT</button>
+        </div>
+
+        <!-- contador para las adopciones -->
+        <div class="mt-4">
+            <h4>Adopciones aprobadas por especie:</h4>
+            <ul id="contador"></ul>
+        </div>
+    </div>
+
+    <footer class="text-center p-3 bg-dark text-white mt-4">
+        <p>&copy; 2025 Adopta Ya - Todos los derechos reservados</p>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/postulaciones.js"></script>
+</body>
+
+</html>

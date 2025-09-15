@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta Ya - Nueva Postulación</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+
+    <header>
+        <h1>🐾 Bienvenido a Adopta Ya 🐾</h1>
+        <p>Tu mejor amigo te está esperando</p>
+    </header>
+    <!-- Navbar responsivo -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <!-- Botón hamburguesa para móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú colapsable -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postulaciones.html">Postulaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postulacion.html">Nueva Postulación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Formulario -->
+    <div class="container mt-4">
+        <div class="card shadow p-4">
+            <h2 class="text-center mb-4">Formulario de Adopción</h2>
+
+            <form id="formPostulacion">
+                <!-- Nombre -->
+                <!-- Nombre -->
+                <div class="mb-3">
+                    <label for="nombre" class="form-label ">Nombre completo *</label>
+
+
+                    <input type="text" id="nombre" class="form-control"
+                        placeholder="Ingresa tu nombre completo solo letras" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
+                        oninput="validarNombreEnTiempoReal(this)">
+                    <div class="invalid-feedback" id="nombre-invalid">
+                        Por favor ingresa un nombre válido (solo letras y espacios)
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="email" class="form-control" placeholder="hola@ejemplo.com" required>
+                </div>
+
+                <!-- Mascota -->
+                <div class="mb-3">
+                    <label for="mascota" class="form-label">Mascota seleccionada</label>
+                    <select id="mascota" class="form-select" required></select>
+                </div>
+
+                <!-- Experiencia -->
+                <div class="mb-3">
+                    <label for="experiencia" class="form-label">Experiencia con mascotas</label>
+                    <textarea id="experiencia" class="form-control" rows="3" required></textarea>
+                </div>
+
+                <!-- Evidencia -->
+                <div class="mb-3">
+                    <label for="evidencia" class="form-label">Evidencia de domicilio (URL opcional)</label>
+                    <input type="url" id="evidencia" class="form-control">
+                </div>
+
+                <!-- Botón -->
+                <button type="submit" class="btn btn-success w-100">Enviar Postulación</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-3 bg-dark text-white mt-4">
+        <p>&copy; 2025 Adopta Ya - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/postulacion.js"></script>
+</body>
+
+</html>
